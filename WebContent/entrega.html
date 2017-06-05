@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Finalizar pedido</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head>
+<body>
+	 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+       <div class="container">
+           <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Supermercado</a>
+           </div>
+           <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                   <li>
+                       <a href="produto.html">Produto</a>
+                   </li>
+                   <li>
+                       <a href="carrinho.html">Carrinho</a>
+                   </li>
+                   <li>
+                       <a href="compras.html">Compra</a>
+                   </li>
+                   <li>
+                       <a href="entrega.html">Entrega</a>
+                   </li>
+               </ul>
+           </div>
+           <!-- /.navbar-collapse -->
+       </div>
+       <!-- /.container -->
+   </nav>
+	
+
+	<div style="margin-top: 100px;" class="container">
+	
+<form id="formEntrega" name="formEntrega" action="" method="post"  class="form-group">
+	<fieldset>
+	<legend>Endereço de Entrega</legend> 
+		<div class="form-group row" >
+			<label  class="col-sm-1 col-form-label" for="ruaEntrega" id="">Rua </label>
+			<div class="col-sm-2">
+				<input type="text" id="ruaEntrega" name="ruaEntrega" maxlength="80"
+					class="form-control text-center" required />
+			</div>
+		</div>
+		<div class="form-group row" >
+			<label class="col-sm-1 col-form-label"  for="cepEntrega" id="">CEP </label>
+			<div class="col-sm-2">
+				<input type="text" id="cepEntrega" name="cepEntrega" maxlength="11"
+					class="form-control text-center" required />
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-1 col-form-label"  for="numEntrega" id="">Numero </label>
+			<div class="col-sm-2">
+				<input type="text" id="numEntrega" name="numEntrega" maxlength="20"
+					class="form-control text-center" required />
+			</div>
+		</div>
+		<br/>
+		<div class="form-group row" >
+			<div class="col-sm-2">
+			<input type="submit" id="enviarEntrega" name="enviarEntrega" value="Enviar"
+				class="form-control text-center" required />
+			</div>
+			<div class="col-sm-2">
+			<input type="button" id="limparEntrega" name="limparEntrega" value="Limpar"
+				onclick="reset()"
+				class="form-control text-center" required />
+				</div>
+		</div>
+		</fieldset>
+</form>
+</div>
+</body>
+</html>
