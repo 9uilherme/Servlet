@@ -15,6 +15,18 @@ public class Entrega {
 		this.cep = cep;
 		this.num = num;
 	}
+	
+	public String getRua() {
+		return this.rua;
+	}
+
+	public String getCep() {
+		return this.cep;
+	}
+
+	public String getNum() {
+		return this.num;
+	}
 
 	public static class ListaEntrega {
 		private static ListaEntrega instance;
@@ -26,10 +38,11 @@ public class Entrega {
 		
 		public void listar(){
 			int cont = 1;
+			Entrega ent;
 			Iterator<Entrega> i = listaEntrega.iterator();
 			while(i.hasNext()){
-				i.next();
-				System.out.println(cont);
+				ent = i.next();
+				System.out.println(cont+" Rua= "+ent.getRua()+" CEP= "+ent.getCep()+" NUM= "+ent.getNum());
 				cont++;
 			}
 		}
@@ -45,4 +58,5 @@ public class Entrega {
 			return instance;
 		}
 	}
+
 }

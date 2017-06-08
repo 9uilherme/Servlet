@@ -111,7 +111,7 @@ import inf.ufg.br.model.Produto;
 	       }else if(request.getParameter("tipo").equals(ENTREGA)){
 	    	   System.out.println("Entrei");
 	    	   ListaEntrega lista = ListaEntrega.getInstanceOf();
-	    	   Entrega entrega = new Entrega(request.getParameter("ruaEntrega"), request.getParameter("cepEntrega"), request.getParameter("nome"));
+	    	   Entrega entrega = new Entrega(request.getParameter("ruaEntrega"), request.getParameter("cepEntrega"), request.getParameter("numEntrega"));
 	    	   lista.addListaEntrega(entrega);
 	    	   lista.listar();
 	    	   response.sendRedirect("entrega.html");
